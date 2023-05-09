@@ -1,0 +1,53 @@
+import rodados.*
+
+describe "Probamos los autos" {
+	const corsa1 = new Corsa(color="gris")
+	const corsa2 = new Corsa(color="verde")
+	const kwidCon = new Kwid()
+	const kwidSin = new Kwid()
+	
+	method initialize() {kwidCon.tieneTanqueAdicional(true)}
+	
+	test "probamos todo lo de corsa" {
+		assert.equals(corsa1.capacidad(), 4)
+		assert.equals(corsa2.capacidad(), 4)
+		assert.equals(corsa1.color(), "gris")
+		assert.equals(corsa2.color(), "verde")
+		assert.equals(corsa1.velocidad(), 150)
+		assert.equals(corsa2.velocidad(), 150
+		)
+		assert.equals(corsa1.peso(), 1300)
+		assert.equals(corsa2.peso(), 1300)
+	}
+	
+	test "probamos todo lo de kwid" {
+		assert.equals(kwidCon.capacidad(), 3)
+		assert.equals(kwidSin.capacidad(), 4)
+		assert.equals(kwidCon.color(), "azul")
+		assert.equals(kwidSin.color(), "azul")
+		assert.equals(kwidCon.velocidad(), 120)
+		assert.equals(kwidSin.velocidad(), 110)
+		assert.equals(kwidCon.peso(), 1350)
+		assert.equals(kwidSin.peso(), 1200)
+	}
+	
+	test "probamos trafic interior comodo, motor bataton" {
+		trafic.interior(comodo)
+		trafic.motor(bataton)
+		
+		assert.equals(trafic.capacidad(), 5)
+		assert.equals(trafic.color(), "blanco")
+		assert.equals(trafic.velocidad(), 80)
+		assert.equals(trafic.peso(), 4000 + 700 + 500)
+	}
+	
+	test "probamos trafic interior popular, motor pulenta" {
+		trafic.interior(popular)
+		trafic.motor(pulenta)
+		
+		assert.equals(trafic.capacidad(), 12)
+		assert.equals(trafic.color(), "blanco")
+		assert.equals(trafic.velocidad(), 130)
+		assert.equals(trafic.peso(), 4000 + 1000 + 800)
+	}
+}
