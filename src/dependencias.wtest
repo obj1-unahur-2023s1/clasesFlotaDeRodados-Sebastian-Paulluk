@@ -1,5 +1,6 @@
 import rodados.*
 import dependencia.*
+import pedidos.*
 
 describe "Probamos las dependencias" {
 	const deportes = new Dependencia(empleados=45)
@@ -21,6 +22,10 @@ describe "Probamos las dependencias" {
 		trafic.motor(bataton)
 		trafic.interior(popular)
 		cultura.agregarAFlota(trafic)
+	}
+	
+	method agregarPedido(unPedido) {
+		pedido.add(unPedido)
 	}
 	
 	
